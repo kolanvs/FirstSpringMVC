@@ -1,12 +1,25 @@
 package com.kolanvs.firstmvcapp.models;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 /**
  * @author Neil Alishev
  */
 public class Person {
     private int id;
+
+    @NotEmpty(message = "Pusto blyat!")
+    @Size(min = 2, max = 30, message = "Ne ta dlina, blyat!")
     private String name;
+
+    @Min(value = 0, message = "Molodoy slishkom blyat!")
     private int age;
+
+    @NotEmpty(message = "Pustoy email blyat!")
+    @Email(message = "Nepravilnyi email blyat!")
     private String email;
 
     public Person() {
