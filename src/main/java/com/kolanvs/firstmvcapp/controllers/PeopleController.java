@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import com.kolanvs.firstmvcapp.dao.PersonDAO;
 import com.kolanvs.firstmvcapp.models.Person;
 
-/**
- * @author Neil Alishev
- */
 @Controller
 @RequestMapping("/people")
 public class PeopleController {
